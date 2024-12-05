@@ -24,6 +24,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: mapd713nodeapi
-          publish-profile: ${{ secrets.MAZ_SECRET_DEPLOY }}
+          publish-profile: ${{ secrets.MAPD713_GROUP2_SECRET }}
           package: .
           
