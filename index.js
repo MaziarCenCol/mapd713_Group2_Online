@@ -109,9 +109,6 @@ app.get("/", (req, res) => {
             <br/>
             <br/>
             <br/>
-            <h3>
-            Harsimran Singh ....... &....... Maziar Hassanzadeh
-            </h3>
         </div>
     </body>
     </html>
