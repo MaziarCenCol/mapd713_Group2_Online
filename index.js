@@ -45,3 +45,7 @@ mongoose.connect(mongourl).then(()=>{
     })
 }).catch((error)=>console.log(error));
 app.use("/api/patient",route);
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
+
