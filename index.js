@@ -41,11 +41,7 @@ const swaggerDefinition = {
 // Swagger UI route
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Root route
-app.get("/", (req, res) => {
-  res.send("MAPD713-Project Server is running on Azure ...");
-});
-
+// .env and MongoDB
 const PORT = process.env.PORT || 8000;
 const mongourl = process.env.MONGO_URL;
 
@@ -61,5 +57,65 @@ mongoose
 
 app.use("/api/patient",route);
 
+app.get("/", (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAPD713 Project</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            .container {
+                text-align: center;
+            }
+            h1 {
+                font-size: 24px;
+                color: darkblue;
+                margin-bottom: 50px;
+            }
+            .btn {
+                font-size: 1.2em;
+                padding: 10px 20px;
+                background-color: #0078d4;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                margin-top: 20px;
+            }
+            .btn:hover {
+                background-color: #005fa3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>MAPD713_Project Server Running on Azure ....</h1>
+            <a href="https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net/api-docs" class="btn" target="_blank">
+                Test APIs on Swagger
+            </a>
+            <br/>
+            <br/>
+            <br/>
+            <h3>
+            Harsimran Singh ....... &....... Maziar Hassanzadeh
+            </h3>
+        </div>
+    </body>
+    </html>
+  `);
+});
 
 
