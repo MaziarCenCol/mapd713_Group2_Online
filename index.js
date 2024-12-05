@@ -32,8 +32,7 @@ const swaggerDefinition = {
   const swaggerSpec = swaggerJsdoc(options);
   
 // Swagger UI route
-app.use("/api-docs", swaggerUi.serve,
-     swaggerUi.setup(swaggerSpec));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 const PORT = process.env.PORT || 8000;
 const mongourl = process.env.MONGO_URL;
 mongoose.connect(mongourl).then(()=>{
