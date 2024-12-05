@@ -5,7 +5,10 @@ import bodyParser from "body-parser";
 import route from "./routes/patientRoutes.js";
 import swaggerUi from "swagger-ui-express";  // Import swagger-ui-express
 import swaggerJsdoc from "swagger-jsdoc";  
+import cors from "cors";
+
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 dotenv.config();
 
