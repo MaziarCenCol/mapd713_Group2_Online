@@ -8,8 +8,9 @@ mapd713_group2
 
 Deployment:
 1-Download profile from azure
-2-in GitHub: setting->secret and ... -> new secret -> paste the content from downloaded file
+2-in GitHub: setting->secret and ... -> new secret file -> paste the content from downloaded profile
 3-in VS code .GitHub/workflows/deploy.yml
+
 name: Deploy to Azure App Service
 
 on:
@@ -35,11 +36,15 @@ jobs:
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
-          app-name: mapd713nodeapi
-          publish-profile: ${{ secrets.MAPD713_GROUP2_SECRET }}
+          app-name: app-name
+          publish-profile: ${{ secrets.SECRET_FILE_NAME }}
           package: .
           
-(replace mapd713nodeapi and MAPD713_GROUP2_SECRET)
+(replace mapd713nodeapi and SECRET_FILE_NAME)
 
-see in Action the success tag.
+4- push to github
+5- see in GITHUB -> Action, the process of yml and and success tag if not, it shows the error reason and solve it easily.
+
+6- in Azure Start and Brows your app and enjoy it.
+
 
