@@ -36,7 +36,7 @@ const swaggerDefinition = {
   
 // Swagger UI route
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 const mongourl = process.env.MONGO_URL;
 mongoose.connect(mongourl).then(()=>{
     console.log("Connection success");
