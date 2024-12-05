@@ -21,8 +21,8 @@ const swaggerDefinition = {
     },
     servers: [
       {
-        // url: "http://localhost:5000",  // Your local server URL
-        url: "https://portal.azure.com/?Microsoft_Azure_Education_correlationId=78a28cc3-5c13-4369-8fbe-242bf8e0f969#@maziarhassanzadehgmail.onmicrosoft.com/resource/subscriptions/2ad1dc3a-c516-4b07-a384-8788483e8b53/resourceGroups/mapd713_group2/providers/Microsoft.Web/sites/mapd713nodeapi/appServices",
+        url: "http://localhost:5000",  // Your local server URL
+        //url: "https://portal.azure.com/?Microsoft_Azure_Education_correlationId=78a28cc3-5c13-4369-8fbe-242bf8e0f969#@maziarhassanzadehgmail.onmicrosoft.com/resource/subscriptions/2ad1dc3a-c516-4b07-a384-8788483e8b53/resourceGroups/mapd713_group2/providers/Microsoft.Web/sites/mapd713nodeapi/appServices",
       },
     ],
   };
