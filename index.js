@@ -22,10 +22,14 @@ const swaggerDefinition = {
     servers: [
       {
         //url: "http://localhost:5000",  // local server URL
-        url: "https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net/",  // Azure url
+        url: "https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net",  // Azure url
       },
     ],
   };
+  
+  app.use(cors({
+    origin: ["https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net"]
+  }));
   
   const options = {
     swaggerDefinition,
