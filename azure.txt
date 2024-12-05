@@ -6,19 +6,40 @@ Azure Subscription:
 Resource group:
 mapd713_group2
 
-az ad sp create-for-rbac --name "github-actions-deploy" --role contributor --scopes /subscriptions/2ad1dc3a-c516-4b07-a384-8788483e8b53/resourceGroups/mapd713_group2 --sdk-auth
+Deployment:
+1-Download profile from azure
+2-in GitHub: setting->secret and ... -> new secret -> paste the content from downloaded file
+3-in VS code .GitHub/workflows/deploy.yml
+name: Deploy to Azure App Service
 
+on:
+  push:
+    branches:
+      - main
 
-FTPS endpoint
-ftps://waws-prod-yt1-055.ftp.azurewebsites.windows.net/site/wwwroot
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
 
-FTPS Username
-mapd713nodeapi\$mapd713nodeapi
-Password
-Avchu5swNffbfvH5mZmG9YEh7XklyuDEp5auxjEqc6Gk36qsBowf8Byzsbis
+      - name: Setup Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18.x"
 
-User Scope
-Username
-mapd713group2
-Password
-M@PD713group2
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: mapd713nodeapi
+          publish-profile: ${{ secrets.MAPD713_GROUP2_SECRET }}
+          package: .
+          
+(replace mapd713nodeapi and MAPD713_GROUP2_SECRET)
+
+see in Action the success tag.
+
