@@ -1,0 +1,83 @@
+[
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "bdate": "1985-05-15",
+      "gender": "Male",
+      "address": "123 Elm Street, Springfield, IL",
+      "status": "normal",
+      "clinical": [
+        {
+          "bph": 120,
+          "bpl": 80,
+          "rr": 16,
+          "bol": 98,
+          "hbr": 75
+        }
+      ],
+      "createdAt": "2024-10-18T22:00:00.000Z",
+      "updatedAt": "2024-10-18T22:00:00.000Z"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "987-654-3210",
+      "bdate": "1990-07-22",
+      "gender": "Female",
+      "address": "456 Oak Avenue, Metropolis, NY",
+      "status": "critical",
+      "clinical": [
+        {
+          "bph": 135,
+          "bpl": 88,
+          "rr": 20,
+          "bol": 96,
+          "hbr": 78
+        }
+      ],
+      "createdAt": "2024-10-18T22:05:00.000Z",
+      "updatedAt": "2024-10-18T22:05:00.000Z"
+    },
+    {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "555-123-4567",
+      "bdate": "1975-03-12",
+      "gender": "Female",
+      "address": "789 Pine Lane, Gotham City",
+      "status": "critical",
+      "clinical": [
+        {
+          "bph": 160,
+          "bpl": 95,
+          "rr": 19,
+          "bol": 95,
+          "hbr": 80
+        }
+      ],
+      "createdAt": "2024-10-18T22:10:00.000Z",
+      "updatedAt": "2024-10-18T22:10:00.000Z"
+    },
+    {
+      "name": "Robert Brown",
+      "email": "robert.brown@example.com",
+      "phone": "444-567-8901",
+      "bdate": "1967-11-03",
+      "gender": "Male",
+      "address": "321 Cedar Street, Star City",
+      "status": "critical",
+      "clinical": [
+        {
+          "bph": 45,
+          "bpl": 85,
+          "rr": 22,
+          "bol": 92,
+          "hbr": 85
+        }
+      ],
+      "createdAt": "2024-10-18T22:15:00.000Z",
+      "updatedAt": "2024-10-18T22:15:00.000Z"
+    }
+  ]
+  
