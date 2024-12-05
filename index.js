@@ -36,7 +36,7 @@ const swaggerDefinition = {
   
 // Swagger UI route
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 const mongourl = process.env.MONGO_URL;
 mongoose.connect(mongourl).then(()=>{
     console.log("Connection success");
@@ -46,6 +46,6 @@ mongoose.connect(mongourl).then(()=>{
 }).catch((error)=>console.log(error));
 app.use("/api/patient",route);
 app.get("/", (req, res) => {
-  res.send("Server is running...");
+  res.send("MAPD713 Project Server is running on Azure ...");
 });
 
