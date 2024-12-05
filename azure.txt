@@ -1,0 +1,24 @@
+http://localhost:5000/api/patient/patients
+
+Azure Subscription:
+2ad1dc3a-c516-4b07-a384-8788483e8b53
+
+Resource group:
+mapd713_group2
+
+az ad sp create-for-rbac --name "github-actions-deploy" --role contributor --scopes /subscriptions/2ad1dc3a-c516-4b07-a384-8788483e8b53/resourceGroups/mapd713_group2 --sdk-auth
+
+
+FTPS endpoint
+ftps://waws-prod-yt1-055.ftp.azurewebsites.windows.net/site/wwwroot
+
+FTPS Username
+mapd713nodeapi\$mapd713nodeapi
+Password
+Avchu5swNffbfvH5mZmG9YEh7XklyuDEp5auxjEqc6Gk36qsBowf8Byzsbis
+
+User Scope
+Username
+mapd713group2
+Password
+M@PD713group2
