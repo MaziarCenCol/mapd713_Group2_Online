@@ -26,4 +26,3 @@ jobs:
           app-name: mapd713nodeapi
           publish-profile: ${{ secrets.MAZ_SECRET_DEPLOY }}
           package: .
-          
