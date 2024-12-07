@@ -21,8 +21,8 @@ const swaggerDefinition = {
     },
     servers: [
       {
-        url: "http://localhost:5000",  // local server URL
-        //url: "https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net",  // Azure url
+        //url: "http://localhost:5000",  // local server URL
+        url: "https://mapd713nodeapi-bxfhe4hxbzfdewbz.canadacentral-01.azurewebsites.net",  // Azure url
       },
     ],
   };
