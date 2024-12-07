@@ -26,4 +26,3 @@ jobs:
           app-name: mapd713nodeapi
           publish-profile: ${{ secrets.MAPD713_GROUP2_SECRET }}
           package: .
-          
